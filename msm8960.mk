@@ -98,17 +98,12 @@ PRODUCT_COPY_FILES += \
 # Common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
-    debug.composition.type=dyn \
-    debug.egl.hw=1 \
-    debug.mdpcomp.logs=0 \
-    debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     lpa.decode=true \
     persist.audio.fluence.mode=endfire \
     persist.audio.vr.enable=false \
     persist.audio.handset.mic=digital \
     persist.audio.speaker.location=high \
-    persist.hwc.mdpcomp.enable=true \
     persist.thermal.monitor=true \
     ro.qc.sdk.audio.fluencetype=fluence \
     ro.use_data_netmgrd=true \
