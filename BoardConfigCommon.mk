@@ -43,8 +43,8 @@ TARGET_CPU_SMP := true
 
 # Flags for Krait CPU
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
-TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
+TARGET_GLOBAL_CFLAGS += -fmerge-all-constants -funsafe-math-optimizations -ftree-vectorize -mfpu=neon-vfpv4 -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -fmerge-all-constants -funsafe-math-optimizations -ftree-vectorize -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_CPU_VARIANT := krait
 
 # Krait optimizations
@@ -54,6 +54,7 @@ TARGET_KRAIT_BIONIC_PLDOFFS := 10
 TARGET_KRAIT_BIONIC_PLDTHRESH := 10
 TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
+TARGET_ENABLE_SNAPDRAGON_LLVM := true
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
